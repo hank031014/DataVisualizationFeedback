@@ -16,6 +16,7 @@
 最近為了交這門課的作業，而選擇做HW8([成品在此](https://hank031014.github.io/gov_loan_data/))。由於課程PPT裡強烈建議使用D3，於是我就使用D3來畫圖表。進入D3官網，真是令人印象深刻，裡面羅列大約近百種圖表樣式。有些外觀真的非常特別，有些則有很棒的互動效果。不過我最後使用多線條這線圖來做而已，一來是不太熟悉D3的寫法，二來是各級政府的負債資料其實用折線圖就能將訊息表達得很清楚。相較於Highchart，D3的程式寫法真的麻煩許多，但圖表樣式卻相對多很多。
 
 接下來就做個Highchart和D3的比較，下方是Highchart的程式碼：
+	
 	Highcharts.chart('container', {
         title: {
             text: 'Monthly Average Temperature',
@@ -63,6 +64,7 @@
         }]
     });
 這份程式碼取自Highchart官網的[Demo圖表](http://www.highcharts.com/demo/line-basic)，呼叫了chart()後，在裡面填入圖表各式各樣的元素，例如XY軸、提示框、標題、顏色，還有最重要的數據資料，填入格式很像JSON。接著放到瀏覽器上運行就能看見圖表。接著是我為了HW8寫的D3程式碼：
+	
 	var div = d3.select("body").append("div")	
     .attr("class", "tooltip")				
     .style("opacity", 0);
